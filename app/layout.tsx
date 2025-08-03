@@ -1,19 +1,17 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import localFont from 'next/font/local';
-import HeroSection from "@/components/HeroSection";
+import localFont from "next/font/local";
 
-const clashDisplayFont= localFont({
-  src:"../public/fonts/ClashDisplay-Variable.ttf",
-  variable:'--clashDisplay'
-})
+const clashDisplayFont = localFont({
+  src: "../public/fonts/ClashDisplay-Variable.ttf",
+  variable: "--clashDisplay",
+});
 
-const panchangFont= localFont({
-  src:"../public/fonts/Panchang-Variable.ttf",
-  variable:'--panchang'
-})
+const panchangFont = localFont({
+  src: "../public/fonts/Panchang-Variable.ttf",
+  variable: "--panchang",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,9 +35,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`bg-neutral-950 px-64 ${geistSans.variable} ${geistMono.variable} ${clashDisplayFont.variable} ${panchangFont.variable} font-main`}>
-        <Navbar/>
-        <HeroSection/>
+      <body
+        className={`bg-neutral-950 px-68 ${geistSans.variable} ${geistMono.variable} ${clashDisplayFont.variable} ${panchangFont.variable} font-main`}
+      >
         {children}
       </body>
     </html>
