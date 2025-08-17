@@ -23,26 +23,37 @@ function ProjectCard({
   projectType,
 }: projectPropType) {
   return (
-    <div className="flex bg-neutral-900 rounded-xl p-8 my-5 ease-in-out duration-100 hover:scale-102 delay-75 justify-between">
+    <div className="flex bg-neutral-900 rounded-xl p-6 my-6 transition-transform transform-gpu hover:scale-105 hover:shadow-lg hover:bg-gradient-to-br hover:from-neutral-800 hover:via-neutral-900 hover:to-neutral-950 hover:opacity-95">
+      {/* Left Section */}
       <div className="flex items-start space-x-4 flex-1">
-        <div className="bg-neutral-700 p-2 w-12 rounded-xl flex items-center justify-center">
+        {/* Icon */}
+        <div className="bg-neutral-700 p-3 w-14 h-14 rounded-xl flex items-center justify-center">
           {icon}
         </div>
+
+        {/* Content */}
         <div className="space-y-2 flex-1">
-          <div className="flex items-center space-x-1">
-            <span className="text-white font-semibold">{title}</span>
+          {/* Title */}
+          <div className="flex items-center space-x-2">
+            <h3 className="text-white text-lg font-bold">{title}</h3>
           </div>
-          <div className="inline-block bg-gray-800 rounded-md px-3 py-0.5 backdrop-blur-sm">
-            <span className="text-neutral-200 font-sm text-sm">
-              {projectType}
-            </span>
+
+          {/* Project Type Badge */}
+          <div className="inline-block bg-gradient-to-r from-purple-700 to-indigo-700 rounded-md px-3 py-0.5 text-xs font-medium text-white shadow-sm">
+            {projectType}
           </div>
-          <p className="text-secondary text-sm py-3">{description}</p>
+
+          {/* Description */}
+          <p className="text-neutral-300 text-sm py-2 leading-relaxed">
+            {description}
+          </p>
+
+          {/* Tech Stack */}
           <div className="flex flex-wrap gap-2 mt-2">
             {techStack.map((tech) => (
               <span
                 key={tech}
-                className="text-xs text-white bg-neutral-800 p-1.5 rounded"
+                className="text-xs text-white bg-neutral-800 px-2 py-1 rounded-full border border-neutral-700 shadow-sm hover:bg-neutral-700 transition"
               >
                 {tech}
               </span>
@@ -50,7 +61,9 @@ function ProjectCard({
           </div>
         </div>
       </div>
-      <div className="text-white flex flex-col items-center space-y-3 w-1/6 min-w-[60px]">
+
+      {/* Right Section: Links */}
+      <div className="flex flex-col items-center justify-center space-y-4 w-1/6 min-w-[60px]">
         {links.map((link) => (
           <IconLink
             key={link.url}

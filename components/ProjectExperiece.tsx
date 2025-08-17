@@ -4,15 +4,13 @@ import Experience from "./Experience";
 import ProjectsSection from "./ProjectsSection";
 import LetsTalkSection from "./LetsTalkSection";
 
-
-
 function ProjectExperience() {
   return (
     <div>
-      <TracingBeam className="">
-        <Experience/>
-        <ProjectsSection/>
-        <LetsTalkSection/>
+      <TracingBeam>
+        <Experience />
+        <ProjectsSection />
+        <LetsTalkSection />
       </TracingBeam>
     </div>
   );

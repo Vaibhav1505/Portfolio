@@ -29,7 +29,8 @@ function ExperienceCard({
 }: cardData) {
   const router = useRouter();
 
-  const handleClick = () => {
+  const handleCompanyClick = (e: React.MouseEvent) => {
+    e.stopPropagation(); // Prevent card navigation
     window.open(companyLink, "_blank");
   };
 
@@ -40,38 +41,51 @@ function ExperienceCard({
   return (
     <div
       onClick={handleCardClick}
-      className="bg-neutral-900 space-y-6 rounded-xl hover:cursor-pointer p-10 my-5 hover:scale-102 delay-100  ease-in-out duration-100"
+      className="bg-neutral-900 rounded-xl p-8 my-6 space-y-6 transition-transform transform-gpu hover:scale-105 hover:shadow-lg hover:bg-gradient-to-br hover:from-neutral-800 hover:via-neutral-900 hover:to-neutral-950 hover:opacity-95 cursor-pointer"
     >
       {/* Top Section */}
-      <div className="flex items-start space-x-4">
-        <div className="bg-neutral-700 p-2 rounded-xl">{icon}</div>
-        <div className="space-y-2">
-          <div className="space-x-1 flex">
-            <span className="text-white font-semibold">{jobRole}</span>
-            <span className="text-secondary">at</span>
-            <div
-              className="flex space-x-2 cursor-pointer"
-              onClick={handleClick}
+      <div className="flex items-start gap-4">
+        {/* Icon */}
+        <div className="bg-neutral-700 p-3 rounded-xl w-14 h-14 flex items-center justify-center">
+          {icon}
+        </div>
+
+        {/* Job Info */}
+        <div className="flex flex-col space-y-2 flex-1">
+          {/* Role & Company */}
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="text-white font-semibold text-lg">{jobRole}</span>
+            <span className="text-neutral-400 text-sm">at</span>
+            <button
+              onClick={handleCompanyClick}
+              className="flex items-center gap-1 text-white font-semibold hover:underline"
+              aria-label={`Visit ${companyName}`}
             >
-              <p className="font-semibold  text-white">{companyName}</p>
+              {companyName}
               <ExternalLinkIcon />
-            </div>
+            </button>
           </div>
-          <div className="inline-block bg-blue-500/20 rounded-md px-3 py-0.5 backdrop-blur-sm">
-            <span className="text-blue-600 font-semibold text-sm">
+
+          {/* Duration */}
+          <div className="inline-block bg-gradient-to-r from-purple-700 to-indigo-700 rounded-md px-2 backdrop-blur-sm w-fit">
+            <span className="text-white font-medium text-xs">
               {jobDuration}
             </span>
           </div>
 
-          <p className="text-secondary text-sm">{jobDescription}</p>
+          {/* Description */}
+          <p className="text-neutral-300 text-sm leading-relaxed">
+            {jobDescription}
+          </p>
         </div>
       </div>
-      {/* Bottom Section */}
-      <div className="space-x-2 ">
+
+      {/* Tech Stack */}
+      <div className="flex flex-wrap gap-2">
         {techStack.map((tech) => (
           <div
             key={tech.name}
-            className="inline-flex   items-center gap-1 px-2 py-1 border border-secondary rounded-md bg-secondary/10 hover:bg-secondary/20 transition"
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neutral-800 border border-neutral-700 hover:bg-neutral-700 transition"
           >
             {tech.icon}
             <span className="text-xs text-white">{tech.name}</span>

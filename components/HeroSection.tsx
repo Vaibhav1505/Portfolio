@@ -42,7 +42,7 @@ function HeroSection() {
         <span className="text-3xl flex gap-1.5 text-white font-medium mt-4 text-center md:text-left">
           Hi, I&apos;m <PointerHighlight>Vaibhav</PointerHighlight>
         </span>
-        <p className="text-secondary">23, Mau </p>
+        <p className="text-secondary">23, India </p>
        <FlipWords words={roleWords}/>
         <span className="text-secondary text-md my-3  ">
           Turning ambitious ideas into powerful digital products, I specialize
