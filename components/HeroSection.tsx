@@ -6,8 +6,12 @@ import IconLink from "./ui-components/IconLink";
 import PersonalImage from "../assets/images/WhatsApp Image 2025-07-19 at 11.43.01_960a0d70.jpg";
 import Image from "next/image";
 import { PointerHighlight } from "./ui/pointer-highlight";
+import { FlipWords } from "./ui/flip-words";
 
 function HeroSection() {
+
+  const roleWords=["FullStack Developer","Frontend Developer","Backend Developer","Flutter Developer"];
+
   const navigationData = [
     {
       title: "Github",
@@ -35,11 +39,12 @@ function HeroSection() {
           src={PersonalImage}
           alt="PersonalImage"
         />
-        <span className="text-2xl flex gap-1.5 text-white font-medium mt-4 text-center md:text-left">
+        <span className="text-3xl flex gap-1.5 text-white font-medium mt-4 text-center md:text-left">
           Hi, I&apos;m <PointerHighlight>Vaibhav</PointerHighlight>
         </span>
-        <p className="text-secondary">23, Mau | Full Stack Developer</p>
-        <span className="text-secondary text-sm my-3  ">
+        <p className="text-secondary">23, Mau </p>
+       <FlipWords words={roleWords}/>
+        <span className="text-secondary text-md my-3  ">
           Turning ambitious ideas into powerful digital products, I specialize
           as a Full Stack Developer using the MERN (MongoDB, Express.js,
           React.js, Node.js) stack and Flutter. From architecting robust backend

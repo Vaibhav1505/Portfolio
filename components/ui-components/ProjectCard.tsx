@@ -23,7 +23,7 @@ function ProjectCard({
   projectType,
 }: projectPropType) {
   return (
-    <div className="flex bg-neutral-900 rounded-xl p-8 my-5 ease-in-out duration-100 justify-between">
+    <div className="flex bg-neutral-900 rounded-xl p-8 my-5 ease-in-out duration-100 hover:scale-102 delay-75 justify-between">
       <div className="flex items-start space-x-4 flex-1">
         <div className="bg-neutral-700 p-2 w-12 rounded-xl flex items-center justify-center">
           {icon}

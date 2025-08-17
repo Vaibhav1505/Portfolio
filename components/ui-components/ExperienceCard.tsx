@@ -1,5 +1,6 @@
 "use client";
 import ExternalLinkIcon from "@/assets/icons/ExternalLinkIcon";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 interface cardData {
@@ -9,6 +10,7 @@ interface cardData {
   jobDescription: string;
   companyName: string;
   companyLink: string;
+  experienceInfoURL: string;
   techStack: {
     icon: React.ReactNode;
     name: string;
@@ -23,13 +25,23 @@ function ExperienceCard({
   companyName,
   companyLink,
   techStack,
+  experienceInfoURL,
 }: cardData) {
+  const router = useRouter();
+
   const handleClick = () => {
     window.open(companyLink, "_blank");
   };
 
+  const handleCardClick = () => {
+    router.push(experienceInfoURL);
+  };
+
   return (
-    <div className="bg-neutral-900 space-y-6 rounded-xl p-10 my-5  ease-in-out duration-100">
+    <div
+      onClick={handleCardClick}
+      className="bg-neutral-900 space-y-6 rounded-xl hover:cursor-pointer p-10 my-5 hover:scale-102 delay-100  ease-in-out duration-100"
+    >
       {/* Top Section */}
       <div className="flex items-start space-x-4">
         <div className="bg-neutral-700 p-2 rounded-xl">{icon}</div>

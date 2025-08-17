@@ -45,6 +45,7 @@ function Experience() {
           name: "Flutter",
         },
       ],
+      experienceInfoURL:'Experience/VKVTech'
     },
   ];
 
@@ -72,6 +73,7 @@ function Experience() {
             companyName={experience.companyName}
             companyLink={experience.companyLink}
             techStack={experience.techStack}
+            experienceInfoURL={experience.experienceInfoURL}
           />
         ))}
       </div>

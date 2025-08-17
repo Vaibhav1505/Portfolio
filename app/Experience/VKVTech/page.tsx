@@ -1,0 +1,73 @@
+"use client";
+import ExpressIcon from "@/assets/icons/ExpressIcon";
+import MongoDbIcon from "@/assets/icons/MongoDbIcon";
+import NodeIcon from "@/assets/icons/NodeIcon";
+import ReactIcon from "@/assets/icons/ReactIcon";
+import SocketioIcon from "@/assets/icons/socketioIcon";
+import TailwindIcon from "@/assets/icons/TailwindIcon";
+import WebRTCIcon from "@/assets/icons/WebRTCIcon";
+import DynamicHeroSection from "@/components/ui-components/DynamicHeroSection";
+import DynamicKeyAchievementsSection from "@/components/ui-components/DynamicKeyAchievementsSection";
+import DynamicProjectsSection from "@/components/ui-components/DynamicProjectSection";
+import DynamicTechStackSection from "@/components/ui-components/DynamicTechStackSection";
+import React from "react";
+
+const VKVTechData = {
+  heroSectionData: {
+    imageUrl: "/assets/images/teal_logo.png",
+    heading: {
+      first: "Full Stack Developer",
+      second: "VKV Technologies Private Limited",
+      third: "2024 - Current",
+    },
+  },
+  techStackData: [
+    { icon: <ReactIcon />, name: "React.js" },
+    { icon: <NodeIcon />, name: "Node.js" },
+    { icon: <ExpressIcon />, name: "Express.js" },
+    { icon: <MongoDbIcon />, name: "MongoDB" },
+    { icon: <TailwindIcon />, name: "TailwindCSS" },
+    { icon: <SocketioIcon />, name: "SocketIo" },
+    { icon: <WebRTCIcon />, name: "WebRTC" },
+  ],
+  keyAchievementData: [
+    "Transitioned from frontend-only to full-stack by learning backend development with Node.js, Express & MongoDB.",
+    "Contributed to the development of an in-house CRM platform, handling both frontend and backend modules.",
+    "Built a Flutter-based dating app (Flings) integrating Firebase, real-time chat, and payment features.",
+    "Implemented WebRTC and Socket.io for seamless real-time communication features.",
+    "Worked on multiple MERN stack projects, improving code scalability and performance.",
+    "Enhanced UI/UX using Tailwind CSS and optimized React components for better reusability.",
+  ],
+  projects: [
+    {
+      title: "CRM Platform",
+      description:
+        "Developed an end-to-end CRM web application for internal clients, including features for sales tracking, lead management, and analytics dashboard.",
+      tech: ["React.js", "Node.js", "MongoDB","ExpressJS"],
+      link: "https://accounts.leadnab.com",
+      image:"/assets/images/leadnab_working_image.png"
+    },
+    {
+      title: "Flings Dating App",
+      description:
+        "Built a cross-platform dating app in Flutter, integrating real-time chat, matchmaking algorithms, and payment gateway.",
+      tech: ["Flutter", "NodeJS","ExpressJS","MongoDB","WebRTC", "Socket.io"],
+      link: "https://flings.vkvtech.com",
+      image:"/assets/images/flingsWorkingImage.png"
+    },
+  ],
+};
+
+const VKVTechPage = () => {
+  return (
+    <div className="py-7">
+      <DynamicHeroSection data={VKVTechData.heroSectionData} />
+      <DynamicTechStackSection data={VKVTechData.techStackData} />
+      <DynamicProjectsSection data={VKVTechData.projects} />
+      <DynamicKeyAchievementsSection data={VKVTechData.keyAchievementData} />
+      
+    </div>
+  );
+};
+
+export default VKVTechPage;

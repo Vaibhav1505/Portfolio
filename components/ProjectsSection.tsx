@@ -28,7 +28,7 @@ function ProjectsSection() {
         },
         {
           icon: <GlobeIcon />,
-          url: "flings.vkvtech.com",
+          url: "https://flings.vkvtech.com",
         },
       ],
       projectType: "Organization",
