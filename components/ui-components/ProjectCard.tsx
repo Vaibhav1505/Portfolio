@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import IconLink from "./IconLink";
+import { useRouter } from "next/navigation";
 
 interface projectPropType {
   icon: React.ReactNode;
@@ -12,6 +13,7 @@ interface projectPropType {
     url: string;
   }[];
   projectType: string;
+  redirectUrl:string
 }
 
 function ProjectCard({
@@ -21,9 +23,18 @@ function ProjectCard({
   techStack,
   links,
   projectType,
+  redirectUrl,
 }: projectPropType) {
+
+const router= useRouter();
+
+  const handleCardClick = () => {
+    router.push(redirectUrl);
+  };
+
+  
   return (
-    <div className="flex bg-neutral-900 rounded-xl p-6 my-6 transition-transform transform-gpu hover:scale-105 hover:shadow-lg hover:bg-gradient-to-br hover:from-neutral-800 hover:via-neutral-900 hover:to-neutral-950 hover:opacity-95">
+    <div onClick={handleCardClick} className="flex bg-neutral-900 rounded-xl p-6 my-6 transition-transform transform-gpu hover:scale-102 hover:shadow-lg hover:bg-gradient-to-br hover:from-neutral-800 hover:via-neutral-900 hover:to-neutral-950 hover:opacity-95">
       {/* Left Section */}
       <div className="flex items-start space-x-4 flex-1">
         {/* Icon */}

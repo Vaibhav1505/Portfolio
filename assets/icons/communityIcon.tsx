@@ -3,7 +3,7 @@ import React from "react";
 import communityIconData from "../iconData/cIconData.webp";
 
 function CommunityIcon() {
-  return <Image src={communityIconData} alt="Flings" />;
+  return <Image src={communityIconData} alt="community" />;
 }
 
 export default CommunityIcon;

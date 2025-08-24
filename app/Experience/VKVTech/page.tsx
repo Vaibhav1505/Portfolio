@@ -6,18 +6,18 @@ import ReactIcon from "@/assets/icons/ReactIcon";
 import SocketioIcon from "@/assets/icons/socketioIcon";
 import TailwindIcon from "@/assets/icons/TailwindIcon";
 import WebRTCIcon from "@/assets/icons/WebRTCIcon";
-import DynamicHeroSection from "@/components/ui-components/DynamicHeroSection";
-import DynamicKeyAchievementsSection from "@/components/ui-components/DynamicKeyAchievementsSection";
-import DynamicProjectsSection from "@/components/ui-components/DynamicProjectSection";
-import DynamicTechStackSection from "@/components/ui-components/DynamicTechStackSection";
+import ExperienceHeroSection from "@/components/ui-components/ExperienceHeroSection";
+import ExperienceKeyAchievementsSection from "@/components/ui-components/ExperienceKeyAchievements";
+import ExperienceProjectsSection from "@/components/ui-components/ExperienceProjectSection";
+import ExperienceTechStackSection from "@/components/ui-components/ExperienceTechStackSection";
 import React from "react";
 
 const VKVTechData = {
   heroSectionData: {
     imageUrl: "/assets/images/teal_logo.png",
     heading: {
-      first: "Full Stack Developer",
-      second: "VKV Technologies Private Limited",
+      first: "VKV Technologies Private Limited",
+      second: "Fullstack Developer",
       third: "2024 - Current",
     },
   },
@@ -56,15 +56,16 @@ const VKVTechData = {
       image:"/assets/images/flingsWorkingImage.png"
     },
   ],
+  
 };
 
 const VKVTechPage = () => {
   return (
-    <div className="py-7">
-      <DynamicHeroSection data={VKVTechData.heroSectionData} />
-      <DynamicTechStackSection data={VKVTechData.techStackData} />
-      <DynamicProjectsSection data={VKVTechData.projects} />
-      <DynamicKeyAchievementsSection data={VKVTechData.keyAchievementData} />
+    <div className="py-7 px-6">
+      <ExperienceHeroSection data={VKVTechData.heroSectionData} />
+      <ExperienceTechStackSection data={VKVTechData.techStackData} />
+      <ExperienceProjectsSection data={VKVTechData.projects} />
+      <ExperienceKeyAchievementsSection data={VKVTechData.keyAchievementData} />
       
     </div>
   );

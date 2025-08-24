@@ -41,7 +41,7 @@ function ExperienceCard({
   return (
     <div
       onClick={handleCardClick}
-      className="bg-neutral-900 rounded-xl p-8 my-6 space-y-6 transition-transform transform-gpu hover:scale-105 hover:shadow-lg hover:bg-gradient-to-br hover:from-neutral-800 hover:via-neutral-900 hover:to-neutral-950 hover:opacity-95 cursor-pointer"
+      className="bg-neutral-900 rounded-xl p-8 my-6 space-y-6 transition-transform transform-gpu hover:scale-102 hover:shadow-lg hover:bg-gradient-to-br hover:from-neutral-800 hover:via-neutral-900 hover:to-neutral-950 hover:opacity-95 cursor-pointer"
     >
       {/* Top Section */}
       <div className="flex items-start gap-4">

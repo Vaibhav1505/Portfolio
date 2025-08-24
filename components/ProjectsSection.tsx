@@ -32,10 +32,11 @@ function ProjectsSection() {
         },
       ],
       projectType: "Organization",
+      redirectUrl: "Projects/Flings",
     },
-     {
+    {
       id: 2,
-      icon: <CommunityIcon/>,
+      icon: <CommunityIcon />,
       title: "commUnity: A Team Collaboration Platform",
       description:
         "The platform empowers teams to efficiently manage their workflows, supporting essential features like adding, deleting, updating, and assigning tasks to specific users. With a user-friendly interface inspired by leading workplace tools like Microsoft Teams, Community enables team members to chat, video conference, and coordinate projects—all in one place.",
@@ -46,7 +47,7 @@ function ProjectsSection() {
         "MongoDB",
         "WebRTC",
         "Socket.io",
-        "NextUI"
+        "NextUI",
       ],
       links: [
         {
@@ -59,12 +60,12 @@ function ProjectsSection() {
         },
       ],
       projectType: "Personal",
+      redirectUrl: "Projects/Community",
     },
-    
   ];
 
   return (
-    <div className="py-10">
+    <div className="py-10 hover:cursor-pointer">
       {/* Top Section */}
       <div className="space-y-2">
         <h1 className="bg-clip-text text-2xl font-semibold text-transparent bg-gradient-to-b from-neutral-50 to bg-neutral-400 backdrop-blur, bg-opacity  backdrop-blur bg-opacity">
@@ -86,6 +87,7 @@ function ProjectsSection() {
             techStack={project.techStack}
             projectType={project.projectType}
             links={project.links}
+            redirectUrl={project.redirectUrl}
           />
         ))}
       </div>
