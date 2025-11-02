@@ -14,11 +14,11 @@ function LetsTalkSection() {
     message: "",
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e:React.ChangeEvent<HTMLInputElement>) => {
     setForm({ ...form, [e.target.id]: e.target.value });
   };
 
-  const handleFormSubmit = async (e) => {
+  const handleFormSubmit = async (e:React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
     const data = { ...form };
     const response = await fetch("/api/contact", {

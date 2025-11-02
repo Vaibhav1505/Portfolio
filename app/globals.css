@@ -21,7 +21,7 @@
 }
 
 @utility font-main {
-  font-family:var(--clashDisplay);
+  font-family:const(--clashDisplay);
 }
 
 @keyframes float {

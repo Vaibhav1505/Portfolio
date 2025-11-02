@@ -18,8 +18,10 @@ export function PointerHighlight({
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
 
   useEffect(() => {
-    if (containerRef.current) {
-      const { width, height } = containerRef.current.getBoundingClientRect();
+    const container = containerRef.current;
+    
+    if (container) {
+      const { width, height } = container.getBoundingClientRect();
       setDimensions({ width, height });
     }
 
@@ -30,13 +32,13 @@ export function PointerHighlight({
       }
     });
 
-    if (containerRef.current) {
-      resizeObserver.observe(containerRef.current);
+    if (container) {
+      resizeObserver.observe(container);
     }
 
     return () => {
-      if (containerRef.current) {
-        resizeObserver.unobserve(containerRef.current);
+      if (container) {
+        resizeObserver.unobserve(container);
       }
     };
   }, []);
@@ -105,8 +107,7 @@ const Pointer = ({ ...props }: React.SVGProps<SVGSVGElement>) => {
       stroke="currentColor"
       fill="currentColor"
       strokeWidth="1"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+
       viewBox="0 0 16 16"
       height="1em"
       width="1em"

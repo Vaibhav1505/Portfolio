@@ -13,17 +13,18 @@ interface ExperienceProjectsSectionProps {
   data: Project[];
 }
 
-const DynamicProjectsSection: React.FC<ExperienceProjectsSectionProps> = ({ data }) => {
+const DynamicProjectsSection: React.FC<ExperienceProjectsSectionProps> = ({
+  data,
+}) => {
   return (
     <section className="mt-12 md:mt-16">
       {/* Section Header */}
       <div className="mb-8 md:mb-12">
-        <h2 className="text-2xl md:text-3xl font-bold text-white">
-          Projects
-        </h2>
+        <h2 className="text-2xl md:text-3xl font-bold text-white">Projects</h2>
         <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-4"></div>
         <p className="text-neutral-400 text-sm md:text-base leading-relaxed max-w-2xl">
-          Key projects I contributed to during my experience, showcasing real-world application of technologies and problem-solving skills.
+          Key projects I contributed to during my experience, showcasing
+          real-world application of technologies and problem-solving skills.
         </p>
       </div>
 
@@ -34,12 +35,12 @@ const DynamicProjectsSection: React.FC<ExperienceProjectsSectionProps> = ({ data
             key={index}
             className="group relative bg-gradient-to-br from-neutral-900/60 to-neutral-800/40 backdrop-blur-sm border border-neutral-700/40 hover:border-neutral-500/60 rounded-2xl overflow-hidden transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:-translate-y-2"
             style={{
-              animationDelay: `${index * 100}ms`
+              animationDelay: `${index * 100}ms`,
             }}
           >
             {/* Background Glow Effect */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-            
+
             {/* Project Image */}
             {project.image && (
               <div className="relative overflow-hidden">
@@ -52,7 +53,7 @@ const DynamicProjectsSection: React.FC<ExperienceProjectsSectionProps> = ({ data
                 />
                 {/* Image Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                
+
                 {/* Decorative Corner Element */}
                 <div className="absolute top-4 right-4 w-3 h-3 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full opacity-0 group-hover:opacity-80 transition-all duration-500 transform scale-0 group-hover:scale-100"></div>
               </div>
@@ -90,8 +91,17 @@ const DynamicProjectsSection: React.FC<ExperienceProjectsSectionProps> = ({ data
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r from-blue-500/20 to-purple-500/20 hover:from-blue-500/30 hover:to-purple-500/30 border border-blue-500/30 hover:border-blue-400/50 text-blue-400 hover:text-blue-300 rounded-xl text-sm font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg backdrop-blur-sm"
                 >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+
+                      strokeWidth={2}
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                    />
                   </svg>
                   View Project
                 </a>

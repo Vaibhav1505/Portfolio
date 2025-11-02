@@ -1,11 +1,12 @@
 import Image from 'next/image'
 import React from 'react'
-import flingsIconData from '../iconData/flingsIconData.png'
+// import flingsIconData from '../iconData/flingsIconData.png'
+import twinedIconData from '../iconData/twined_logo.png';
 
-function FlingsIcon() {
+function TwinedIcon() {
   return (
-    <Image src={flingsIconData} alt='Flings'/>
+    <Image className='rounded-md' src={twinedIconData} alt='Twined'/>
   )
 }
 
-export default FlingsIcon
+export default TwinedIcon

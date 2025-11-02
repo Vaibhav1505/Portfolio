@@ -48,11 +48,11 @@ const VKVTechData = {
       image:"/assets/images/leadnab_working_image.png"
     },
     {
-      title: "Flings Dating App",
+      title: "Twined Dating App",
       description:
         "Built a cross-platform dating app in Flutter, integrating real-time chat, matchmaking algorithms, and payment gateway.",
       tech: ["Flutter", "NodeJS","ExpressJS","MongoDB","WebRTC", "Socket.io"],
-      link: "https://flings.vkvtech.com",
+      link: "https://twined.vkvtech.com",
       image:"/assets/images/flingsWorkingImage.png"
     },
   ],

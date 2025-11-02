@@ -1,9 +1,9 @@
 "use client";
 import { cn } from "@/utils/cn";
 import React from "react";
-import { motion, AnimatePresence, useAnimate } from "motion/react";
+import { motion, useAnimate, HTMLMotionProps } from "motion/react";
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends Omit<HTMLMotionProps<"button">, "ref"> {
   className?: string;
   children: React.ReactNode;
 }
@@ -65,19 +65,13 @@ export const Button = ({ className, children, ...props }: ButtonProps) => {
 
   const handleClick = async (event: React.MouseEvent<HTMLButtonElement>) => {
     await animateLoading();
-    await props.onClick?.(event);
+    if (props.onClick) {
+      await props.onClick(event);
+    }
     await animateSuccess();
   };
 
-  const {
-    onClick,
-    onDrag,
-    onDragStart,
-    onDragEnd,
-    onAnimationStart,
-    onAnimationEnd,
-    ...buttonProps
-  } = props;
+  const { ...buttonProps } = props;
 
   return (
     <motion.button
@@ -127,8 +121,7 @@ const Loader = () => {
       fill="none"
       stroke="currentColor"
       strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+
       className="loader text-white"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -156,8 +149,7 @@ const CheckIcon = () => {
       fill="none"
       stroke="currentColor"
       strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+
       className="check text-white"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />

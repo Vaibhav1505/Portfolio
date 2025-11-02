@@ -10,7 +10,7 @@ import { FlipWords } from "./ui/flip-words";
 
 function HeroSection() {
 
-  const roleWords=["FullStack Developer","Frontend Developer","Backend Developer","Flutter Developer"];
+  const roleWords=["Full Stack Development","Frontend Development","Backend Development","Flutter Development"];
 
   const navigationData = [
     {
@@ -21,7 +21,7 @@ function HeroSection() {
     {
       title: "LinkedIn",
       iconData: <LinkedInIcon />,
-      url: "https://www.linkedin.com/in/vaibhav-singh-a697581b5/",
+      url: "https://www.linkedin.com/in/vaibhav-s-a697581b5/",
     },
     {
       title: "Instagram",

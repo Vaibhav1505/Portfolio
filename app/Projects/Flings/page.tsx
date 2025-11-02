@@ -24,7 +24,7 @@ function Flings() {
   const flingsData = {
     heroSectionData: {
       imageUrl: <FlingsIcon />,
-      projectName: "Flings: Dating App",
+      projectName: "Twined : Dating App",
       organization: "VKV Technologies Private Limited",
       iconLinkData: {
         icon: <GlobeIcon />,
