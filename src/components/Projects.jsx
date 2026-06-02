@@ -15,7 +15,7 @@ const projects = [
     description: "Automating the repetitive nature of job applications. ApplySync extracts your resume data and auto-fills complex job portals (Greenhouse, Lever, Workday) in under 10 minutes with AI-powered precision.",
     tech: ["React", "Plasmo", "Supabase", "OpenAI", "Tailwind"],
     github: "https://github.com/Vaibhav1505", // Main github for now
-    liveUrl: "https://applysyncc.netlify.app/",
+    liveUrl: "applysync.online",
     image: applysyncImage, // Placeholder
     color: "from-brand-500 to-indigo-500"
   },
