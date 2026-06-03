@@ -67,7 +67,7 @@ export default function Hero() {
             className="border-zinc-300 dark:border-zinc-700 text-zinc-800 dark:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 hover:border-zinc-500 transition-all px-8 font-bold"
             startContent={<FileText size={18} />}
             as="a"
-            href="https://drive.google.com/file/d/1IW-RUspydQ9_Ydx7W3lgq6EtPzPX3Asa/view"
+            href="https://drive.google.com/file/d/1fb1lEiPeJsE91yEC5RVt34kKVqz7D-JM/view?usp=sharing"
             target="_blank"
           >
             Download Resume
