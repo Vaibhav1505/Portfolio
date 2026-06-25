@@ -41,7 +41,7 @@ export default function Contact() {
               className="border-zinc-300 dark:border-white/20 text-zinc-900 dark:text-white hover:bg-zinc-100 dark:hover:bg-white/10 w-full sm:w-auto px-8 font-bold"
               endContent={<ArrowUpRight size={18} />}
               as="a"
-              href="https://drive.google.com/file/d/1fb1lEiPeJsE91yEC5RVt34kKVqz7D-JM/view?usp=sharing"
+              href="https://drive.google.com/file/d/1mt4axQrzzWcY_ZNTqVxJql40TBkNTyxV/view?usp=sharing"
               target="_blank"
             >
               Resume
