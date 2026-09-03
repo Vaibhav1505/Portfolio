@@ -24,6 +24,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://vaibhavsingh.pro"),
   title: "Vaibhav Singh",
   description: "Full Stack Developer",
 };
